@@ -1,10 +1,12 @@
 .home-container {
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 4rem 2rem;
   gap: 3rem;
-  flex-wrap: wrap; /* makes it responsive for small screens */
+  flex-wrap: wrap;
+  /* makes it responsive for small screens */
 }
 
 /* ===== Left side (hero image + logo) ===== */
@@ -20,9 +22,8 @@
 }
 
 .main-img {
-  width: 100%;
-  max-width: 565px;
-  border-radius: 12px;
+  width: 565px;
+  height: 565px;
 }
 
 .center-logo {
@@ -37,6 +38,7 @@
 
 /* ===== Right side (text content) ===== */
 .home-right {
+  margin-left: 142px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -45,11 +47,29 @@
   align-items: flex-start;
 }
 
-.home-right img {
-  max-width: 350px;
-  width: 100%;
-  height: auto;
+/* .home-right .heading1 {
+  top: 100px;
+ 
+} */
+
+.home-right .heading2 {
+  width: 322px;
+  color: #F15D2B;
+  font-family: 'Halant';
+  font-size: 40px;
+  font-weight: 400;
 }
+
+.home-right .hero-text {
+  width: 487px;
+  color: #252729;
+  line-height: 100%;
+  font-family: 'Instrument Sans';
+  font-size: 18px;
+  font-weight: 400;
+  flex-wrap: wrap;
+}
+
 
 /* ===== Responsive Styles ===== */
 

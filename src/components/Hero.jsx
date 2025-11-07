@@ -22,9 +22,11 @@ const Hero = () => {
         </div>
       </div>
       <div className="home-right">
-        <img src={hero_head}></img>
-        <img src={film_brand}></img>
-        <img src={hero_text}></img>
+        <img src={hero_head} className="heading1"></img>
+        <p className="heading2">Films . Brands . Art</p>
+        <p className="hero-text">Since 2009, V’ve been telling stories - stories of people, their journeys, and the places that shape them.
+Some begin in polished boardrooms, others in humble village squares. But every story starts the same way - by listening with intention. V believes it takes trust, patience, and an eye for the unseen to capture what truly matters.
+V doesn’t just tell stories - V honors them.</p>
 
       </div>
     </section>
