@@ -1,0 +1,104 @@
+/* Header/Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95%;
+  background: transparent;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* Logo */
+.logo {
+  width: 174px;
+  height: auto;
+  padding: 5px 25px 10px 25px;
+  cursor: pointer;
+}
+
+/* Menu Icon (always visible) */
+.menu-icon {
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  display: block;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #333;
+  z-index: 1100;
+}
+
+/* Nav links container (hidden initially, expands right → left) */
+.nav-links {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 40px;
+  padding-right: 120px;
+  transition: width 0.4s ease;
+}
+
+/* When open, slide left */
+.nav-links.open {
+  width: 80%; /* or 100% if you want full-width open */
+}
+
+/* Menu links */
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 17px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.3s ease;
+}
+
+.nav-links.open a {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nav-links a:hover {
+  color: #e35d2e;
+}
+
+/* "Let's Talk" Button */
+.talk-btn {
+  background: #e35d2e;
+  color: #fff !important;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+}
+
+.talk-btn:hover {
+  background: #c74a1c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links.open {
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding-right: 0;
+  }
+}

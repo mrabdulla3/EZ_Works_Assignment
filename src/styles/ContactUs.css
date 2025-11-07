@@ -1,0 +1,133 @@
+.contact-section {
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.contact-text {
+  margin: 200px 200px 0 200px;
+  height: 145px;
+  max-width: 600px;
+  flex: 1;
+  font-size: 24px;
+  line-height: 100%;
+  font-family: 'Instrument Sans';
+  font-weight: 400;
+}
+
+.contact-form {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  height: 679px;
+  width: 700px;
+  flex: 1;
+
+}
+
+.contact-form h2 {
+  font-weight: 400;
+  font-size: 40px;
+  font-family: 'Halant';
+  color: #252729;
+  margin-bottom: 12px;
+}
+
+.contact-form p {
+  font-weight: 400;
+  font-size: 24px;
+  font-family: 'Instrument Sans';
+  color: #252729;
+  margin-bottom: 80px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 700px;
+  max-width: 807px;
+  min-height: 43px;
+  padding: 10px 11px 10px 11px;
+  margin-bottom: 20px;
+  border: 1px #EAEAEA;
+  border-radius: 2px;
+}
+
+.contact-form button {
+  display: block;
+  margin: 30px auto 0 auto;
+  width: 93px;
+  height: 46px;
+  background: #F15D2B;
+  color: #fff;
+  padding: 12px 16px 12px 16px;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #d14900;
+}
+
+.status {
+  margin-top: 1rem;
+  color: #42210b;
+  font-weight: 500;
+}
+
+.contact-form .contact-details {
+  font-family: 'Halant';
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 17px;
+  color: #F15D2B;
+  display: block;
+  margin: 30px auto 0 auto;
+
+}
+
+
+/* Background corner stickers */
+.corner-design {
+  position: absolute;
+
+}
+
+.corner-design.top-right {
+  z-index: -1;
+  top: 0;
+  right: 0;
+}
+
+.corner-design.bottom-left {
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-form {
+    margin-top: 2rem;
+  }
+
+  .corner-design {
+    width: 150px;
+  }
+}
