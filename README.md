@@ -97,7 +97,10 @@ Confirm a successful 200 / 201 response with the response body
 
 Screenshots
 
+<img width="1917" height="1020" alt="Screenshot from 2025-11-09 02-03-28" src="https://github.com/user-attachments/assets/ea3f1bab-3238-4445-88d5-f65f177d31e4" />
 
+<img width="1917" height="1020" alt="Screenshot from 2025-11-09 02-04-11" src="https://github.com/user-attachments/assets/e31a1bb0-f27b-4eea-ac4b-6c3d19de0f79" />
+<img width="1917" height="1020" alt="Screenshot from 2025-11-09 02-03-52" src="https://github.com/user-attachments/assets/3f784223-c0ff-41a9-ac2e-e2a5fe9ee141" />
 
 
 👤 Author
