@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+EZ Labs — Home Page & Contact Form (React)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive, single-page React implementation of the EZ Labs Home page (Figma) with a production-ready Contact Us form integrated with the provided API.
+Clean UI, form validation, Axios-powered API calls, and a modern responsive navbar.
 
-## Available Scripts
+🔥 Demo / Highlights
 
-In the project directory, you can run:
+Pixel-accurate Home / Hero section built from the Figma spec
 
-### `npm start`
+Front-end validation (required fields + email format + basic phone check)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Modern responsive navbar that expands from right → left inside the header
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Decorative PNG stickers positioned to match the Figma look (top-right & bottom-left)
 
-### `npm test`
+Loading indicator on form submit and clear success / error messages
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Mobile-first, tested across common breakpoints (≥1225px, 1025–1225px, 768–1024px, ≤768px, ≤480px)
 
-### `npm run build`
+Postman collection included for API verification
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🛠 Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+React (Create-React-App compatible)
 
-### `npm run eject`
+Axios for API requests
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Plain CSS (component-scoped stylesheets)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+React Router (react-router-dom) for navigation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Behavior in the app:
 
-## Learn More
+Empty form submission is blocked on the client with a validation message.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Invalid email format is blocked on the client.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+On success (HTTP 200/201) the form clears and the message “Form Submitted” is shown.
 
-### Code Splitting
+🚀 Quick start (run locally)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Clone the repo
 
-### Analyzing the Bundle Size
+git clone https://github.com/<your-username>/ez-labs-assignment.git
+cd ez-labs-assignment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+npm install
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Start dev server
 
-### Deployment
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+Open http://localhost:3000 (or port CRA shows) — app will live-reload on change.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+💡 UI / UX Details & Decisions
+
+Navbar stays visible with logo on the left; menu toggles open inside the header from right→left (not a full-screen sidebar). Works on all breakpoints.
+
+Hero uses a left image with a centered overlay logo and right-side heading elements as provided by the Figma.
+
+Contact form: width is fluid, uses max-width constraints and flex layout — centers the Submit button as in Figma.
+
+Corner stickers: positioned absolutely and scaled with vw/max-width so they remain visually consistent on every device.
+
+Loading state: spinner shown in the submit button while waiting for API response.
+
+Accessibility: form inputs use semantic HTML; button disables while loading to prevent duplicate submits.
+
+✅ Validation implemented
+
+Required fields: name, email, phone, message
+
+Email regex check on client
+
+Basic phone numeric/length check (customize to country format if needed)
+
+Input UI shows success/error message text under the form
+
+📦 Postman (API testing)
+
+A Postman collection is included: postman_collection.json.
+To test with Postman:
+
+Open Postman → Import → Upload postman_collection.json
+
+Open the collection → Contact Us - POST → Send
+
+Confirm a successful 200 / 201 response with the response body
+
+Screenshots
+
+
+
+
+👤 Author
+
+Mohd Abdulla — (your name / GitHub: mrabdulla3)
+Contact: use the Contact form in the app 🙂
