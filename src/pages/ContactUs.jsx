@@ -22,6 +22,7 @@ const ContactUs = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+     setStatus("");
 
     if (!formData.name || !formData.email || !formData.phone || !formData.message) {
       setStatus("Please fill in all fields.");
@@ -33,9 +34,8 @@ const ContactUs = () => {
     if (!emailRegex.test(formData.email)) {
       setStatus("Please enter a valid email address.");
       return;
-    }
-     setLoading(true);
-    setStatus("");
+    }setLoading(true);
+   
 
     try {
       const res = await axios.post(
@@ -57,7 +57,7 @@ const ContactUs = () => {
     } catch (error) {
       console.error("Submission Error:", error);
       setStatus("Network error. Please try again later.");
-    }finally{
+    } finally {
       setLoading(false);
     }
   };
@@ -115,8 +115,8 @@ const ContactUs = () => {
             ></textarea>
 
             <button type="submit" disabled={loading}>
-        {loading ? <span className="loader"></span> : "Submit"}
-      </button>
+              {loading ? <span className="loader"></span> : "Submit"}
+            </button>
           </form>
 
           {status && <p className="status">{status}</p>}
