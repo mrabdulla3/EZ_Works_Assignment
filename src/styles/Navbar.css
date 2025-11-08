@@ -1,4 +1,3 @@
-/* Header/Navbar Container */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -13,7 +12,6 @@
   overflow: hidden;
 }
 
-/* Logo */
 .logo {
   width: 174px;
   height: auto;
@@ -21,7 +19,6 @@
   cursor: pointer;
 }
 
-/* Menu Icon (always visible) */
 .menu-icon {
   width: 45px;
   height: 45px;
@@ -34,7 +31,6 @@
   z-index: 1100;
 }
 
-/* Nav links container (hidden initially, expands right → left) */
 .nav-links {
   position: absolute;
   top: 0;
@@ -50,9 +46,8 @@
   transition: width 0.4s ease;
 }
 
-/* When open, slide left */
 .nav-links.open {
-  width: 80%; /* or 100% if you want full-width open */
+  width: 80%;
 }
 
 /* Menu links */
@@ -76,9 +71,8 @@
   color: #e35d2e;
 }
 
-/* "Let's Talk" Button */
 .talk-btn {
-  background:#F15D2B;
+  background: #F15D2B;
   color: #fff !important;
   padding: 12px 16px 12px 16px;
   border-radius: 24px;
@@ -92,16 +86,110 @@
   background: #c74a1c;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links.open {
-    width: 100%;
+/* === Tablet Responsiveness === */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 16px 25px;
   }
 
   .nav-links {
+    gap: 30px;
+    padding-right: 100px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+}
+
+/* === Mobile Responsiveness === */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px 20px;
+  }
+
+  .menu-icon {
+    width: 35px;
+    height: 35px;
+    z-index: 2100;
+  }
+
+  .menu-icon.close {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    transform: rotate(90deg);
+  }
+
+  .logo {
+    width: 130px;
+    padding: 5px 15px;
+  }
+
+  /* Mobile dropdown style */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
-    padding-right: 0;
+    align-items: center;
+    gap: 25px;
+    background: #fff;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    transition: right 0.4s ease-in-out;
+    z-index: 2000;
+  }
+
+  .nav-links.open {
+    right: 0;
+    width: 70%;
+  }
+
+  .nav-links a {
+    font-size: 20px;
+  }
+
+  .talk-btn {
+    font-size: 18px;
+    padding: 10px 25px;
+  }
+}
+
+/* === Extra Small Devices === */
+@media (max-width: 480px) {
+  .logo {
+    width: 120px;
+  }
+
+  .menu-icon {
+    width: 30px;
+    height: 30px;
+    right: 10px;
+  }
+
+  .menu-icon.close {
+    width: 30px;
+    height: 30px;
+    right: 10px;
+  }
+
+  .nav-links.open {
+    width: 80%;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+  }
+
+  .talk-btn {
+    padding: 8px 20px;
+    font-size: 16px;
   }
 }

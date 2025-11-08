@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../styles/ContactUs.css";
-import corner_bottom from "../assets/bottom_corner.png";
-import corner_top from "../assets/top_corner.png";
+import corner_bottom from "../assets/images/bottom_corner.png";
+import corner_top from "../assets/images/top_corner.png";
 
 
 
@@ -22,13 +22,12 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // ✅ Simple validation
     if (!formData.name || !formData.email || !formData.phone || !formData.message) {
       setStatus("Please fill in all fields.");
       return;
     }
 
-    // ✅ Email validation
+    //Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       setStatus("Please enter a valid email address.");
@@ -46,7 +45,7 @@ const ContactUs = () => {
         }
       );
 
-      if (res.status === 200 || res.status===201) {
+      if (res.status === 200 || res.status === 201) {
         setStatus("Form Submitted Successfully!");
         setFormData({ name: "", email: "", phone: "", message: "" });
       } else {
@@ -60,8 +59,7 @@ const ContactUs = () => {
 
   return (
     <section className="contact-section">
-      
-    
+
       {/* Decorative corners */}
       <img src={corner_top} alt="design" className="corner-design top-right" />
       <img src={corner_bottom} alt="design" className="corner-design bottom-left" />
@@ -114,8 +112,8 @@ const ContactUs = () => {
             <button type="submit">Submit</button>
           </form>
 
-          {status && <p className="status">{status}</p>}    
-           <p className="contact-details">vernita@varnanfilms.co.in | +91 98736 84567</p>
+          {status && <p className="status">{status}</p>}
+          <p className="contact-details">vernita@varnanfilms.co.in | +91 98736 84567</p>
         </div>
       </div>
     </section>

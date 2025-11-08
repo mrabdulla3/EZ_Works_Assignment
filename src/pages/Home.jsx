@@ -1,7 +1,6 @@
-import React from "react";
-import hero_image from "../assets/hero_image.png";
-import hero_logo from "../assets/logo.png";
-import hero_head from "../assets/home_heading.png";
+import hero_image from "../assets/images/hero_image.png";
+import hero_logo from "../assets/images/logo.png";
+import hero_head from "../assets/images/home_heading.png";
 import "../styles/Home.css";
 
 const Home = () => {

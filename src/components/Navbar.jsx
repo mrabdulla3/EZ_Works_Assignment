@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../styles/Navbar.css";
-import logo from "../assets/logo.png";
-import menuIcon from "../assets/open_menu.svg";
-import closeIcon from "../assets/close_menu.svg";
-import mail from "../assets/mail.svg";
+import logo from "../assets/images/logo.png";
+import menuIcon from "../assets/icons/open_menu.svg";
+import closeIcon from "../assets/icons/close_menu.svg";
+import mail from "../assets/icons/mail.svg";
 import { Link, useLocation } from "react-router-dom";
 
 
@@ -26,9 +26,9 @@ const Navbar = () => {
       />
 
       <nav className={`nav-links ${open ? "open" : ""}`}>
-        <Link to="/about" onClick={() => setOpen(false)}>Their Stories</Link>
-        <Link to="/about" onClick={() => setOpen(false)}>Our Story</Link>
-        <Link to="/services" onClick={() => setOpen(false)}>Varnam</Link>
+        <Link to="#" onClick={() => setOpen(false)}>Their Stories</Link>
+        <Link to="#" onClick={() => setOpen(false)}>Our Story</Link>
+        <Link to="#" onClick={() => setOpen(false)}>Varnam</Link>
         <Link to="/contact-us" className="talk-btn" onClick={() => setOpen(false)}>
           Let’s Talk <img src={mail} alt="mail-logo"></img>
         </Link>

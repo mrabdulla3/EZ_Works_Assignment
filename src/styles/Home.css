@@ -7,7 +7,6 @@
   flex-wrap: wrap;
 }
 
-/* ===== Left side (hero image + logo) ===== */
 .hero-container {
   flex: 1;
   display: flex;
@@ -71,11 +70,14 @@
 
 /* ===== Responsive Styles ===== */
 
-/* Tablet (768px) */
 @media (max-width: 768px) {
   .home-container {
     flex-direction: column;
     text-align: center;
+  }
+
+  .home-container .heading1 {
+    max-width: 500px;
   }
 
   .home-right {
@@ -84,10 +86,12 @@
 
   .main-img {
     max-width: 400px;
+    max-height: 400px;
   }
 
   .center-logo {
-    width: 100px;
+    width: 200px;
+    height: 75px;
   }
 }
 
@@ -97,12 +101,19 @@
     padding: 2rem 1rem;
   }
 
+
+  .home-container .heading1 {
+    max-width: 400px;
+  }
+
   .main-img {
     max-width: 300px;
+    max-height: 300px;
   }
 
   .center-logo {
-    width: 80px;
+    width: 150px;
+    height: 50;
   }
 
   .home-right img {
