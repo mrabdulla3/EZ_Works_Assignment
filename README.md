@@ -86,10 +86,10 @@ Input UI shows success/error message text under the form
 
 📦 Postman (API testing)
 
-A Postman collection is included: postman_collection.json.
+A Postman collection is included: EZ_Works.postman_collection.json
 To test with Postman:
 
-Open Postman → Import → Upload postman_collection.json
+Open Postman → Import → Upload EZ_Works.postman_collection.json
 
 Open the collection → Contact Us - POST → Send
 
