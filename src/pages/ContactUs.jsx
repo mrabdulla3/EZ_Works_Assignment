@@ -46,7 +46,7 @@ const ContactUs = () => {
         }
       );
 
-      if (res.status === 200) {
+      if (res.status === 200 || res.status==201) {
         setStatus("✅ Form Submitted Successfully!");
         setFormData({ name: "", email: "", phone: "", message: "" });
       } else {
@@ -60,6 +60,7 @@ const ContactUs = () => {
 
   return (
     <section className="contact-section">
+      
     
       {/* Decorative corners */}
       <img src={corner_top} alt="design" className="corner-design top-right" />

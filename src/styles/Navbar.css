@@ -78,11 +78,14 @@
 
 /* "Let's Talk" Button */
 .talk-btn {
-  background: #e35d2e;
+  background:#F15D2B;
   color: #fff !important;
-  padding: 8px 16px;
-  border-radius: 20px;
+  padding: 12px 16px 12px 16px;
+  border-radius: 24px;
   transition: background 0.3s ease;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Instrument Sans';
 }
 
 .talk-btn:hover {

@@ -1,30 +1,40 @@
 import React, { useState } from "react";
 import "../styles/Navbar.css";
 import logo from "../assets/logo.png";
-import menuIcon from "../assets/open_menu.svg"; // your hamburger icon (SVG is best)
+import menuIcon from "../assets/open_menu.svg";
 import closeIcon from "../assets/close_menu.svg";
+import mail from "../assets/mail.svg";
+import { Link, useLocation } from "react-router-dom";
+
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const location = useLocation();
+
+  const isHome = location.pathname === "/";
+
 
   return (
     <header className="navbar">
-      <img src={logo} alt="Logo" className="logo" />
-
-      <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-        <a href="#films">Films</a>
-        <a href="#brands">Brands</a>
-        <a href="#art">Art</a>
-        <a href="#story">Our Story</a>
-        <a href="#contact" className="talk-btn">Let's Talk</a>
-      </nav>
+      <Link to="/">{!isHome && <img src={logo} alt="Logo" className="logo" />}</Link>
 
       <img
-        src={menuOpen ? closeIcon : menuIcon}
+        src={open ? closeIcon : menuIcon}
         alt="Menu"
         className="menu-icon"
-        onClick={() => setMenuOpen(!menuOpen)}
+        onClick={() => setOpen(!open)}
       />
+
+      <nav className={`nav-links ${open ? "open" : ""}`}>
+        <Link to="/about" onClick={() => setOpen(false)}>Their Stories</Link>
+        <Link to="/about" onClick={() => setOpen(false)}>Our Story</Link>
+        <Link to="/services" onClick={() => setOpen(false)}>Varnam</Link>
+        <Link to="/contact-us" className="talk-btn" onClick={() => setOpen(false)}>
+          Let’s Talk <img src={mail}></img>
+        </Link>
+      </nav>
+
+
     </header>
   );
 };

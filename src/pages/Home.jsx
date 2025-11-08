@@ -2,14 +2,9 @@ import React from "react";
 import hero_image from "../assets/hero_image.png";
 import hero_logo from "../assets/logo.png";
 import hero_head from "../assets/home_heading.png";
-import film_brand from "../assets/film_brand.png";
-import hero_text from "../assets/home_text.png";
+import "../styles/Home.css";
 
-
-
-import "../styles/Hero.css";
-
-const Hero = () => {
+const Home = () => {
   return (
     <section className="home-container">
       <div className="hero-container">
@@ -25,12 +20,12 @@ const Hero = () => {
         <img src={hero_head} className="heading1"></img>
         <p className="heading2">Films . Brands . Art</p>
         <p className="hero-text">Since 2009, V’ve been telling stories - stories of people, their journeys, and the places that shape them.
-Some begin in polished boardrooms, others in humble village squares. But every story starts the same way - by listening with intention. V believes it takes trust, patience, and an eye for the unseen to capture what truly matters.
-V doesn’t just tell stories - V honors them.</p>
+          Some begin in polished boardrooms, others in humble village squares. But every story starts the same way - by listening with intention. V believes it takes trust, patience, and an eye for the unseen to capture what truly matters.
+          V doesn’t just tell stories - V honors them.</p>
 
       </div>
     </section>
   );
 };
 
-export default Hero;
+export default Home;

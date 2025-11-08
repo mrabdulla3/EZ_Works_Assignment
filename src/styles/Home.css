@@ -1,12 +1,10 @@
 .home-container {
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 4rem 2rem;
   gap: 3rem;
   flex-wrap: wrap;
-  /* makes it responsive for small screens */
 }
 
 /* ===== Left side (hero image + logo) ===== */
