@@ -17,7 +17,7 @@ const Home = () => {
         </div>
       </div>
       <div className="home-right">
-        <img src={hero_head} className="heading1"></img>
+        <img src={hero_head} alt="Text is not loaded" className="heading1"></img>
         <p className="heading2">Films . Brands . Art</p>
         <p className="hero-text">Since 2009, V’ve been telling stories - stories of people, their journeys, and the places that shape them.
           Some begin in polished boardrooms, others in humble village squares. But every story starts the same way - by listening with intention. V believes it takes trust, patience, and an eye for the unseen to capture what truly matters.

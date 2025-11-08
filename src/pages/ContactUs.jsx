@@ -24,14 +24,14 @@ const ContactUs = () => {
 
     // ✅ Simple validation
     if (!formData.name || !formData.email || !formData.phone || !formData.message) {
-      setStatus("⚠️ Please fill in all fields.");
+      setStatus("Please fill in all fields.");
       return;
     }
 
     // ✅ Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      setStatus("📧 Please enter a valid email address.");
+      setStatus("Please enter a valid email address.");
       return;
     }
 
@@ -46,15 +46,15 @@ const ContactUs = () => {
         }
       );
 
-      if (res.status === 200 || res.status==201) {
-        setStatus("✅ Form Submitted Successfully!");
+      if (res.status === 200 || res.status===201) {
+        setStatus("Form Submitted Successfully!");
         setFormData({ name: "", email: "", phone: "", message: "" });
       } else {
-        setStatus("❌ Something went wrong. Please try again.");
+        setStatus("Something went wrong. Please try again.");
       }
     } catch (error) {
       console.error("Submission Error:", error);
-      setStatus("🌐 Network error. Please try again later.");
+      setStatus("Network error. Please try again later.");
     }
   };
 

@@ -30,7 +30,7 @@ const Navbar = () => {
         <Link to="/about" onClick={() => setOpen(false)}>Our Story</Link>
         <Link to="/services" onClick={() => setOpen(false)}>Varnam</Link>
         <Link to="/contact-us" className="talk-btn" onClick={() => setOpen(false)}>
-          Let’s Talk <img src={mail}></img>
+          Let’s Talk <img src={mail} alt="mail-logo"></img>
         </Link>
       </nav>
 
