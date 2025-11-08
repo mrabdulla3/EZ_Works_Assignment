@@ -13,6 +13,7 @@ const ContactUs = () => {
     phone: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
@@ -33,6 +34,8 @@ const ContactUs = () => {
       setStatus("Please enter a valid email address.");
       return;
     }
+     setLoading(true);
+    setStatus("");
 
     try {
       const res = await axios.post(
@@ -54,6 +57,8 @@ const ContactUs = () => {
     } catch (error) {
       console.error("Submission Error:", error);
       setStatus("Network error. Please try again later.");
+    }finally{
+      setLoading(false);
     }
   };
 
@@ -109,7 +114,9 @@ const ContactUs = () => {
               onChange={handleChange}
             ></textarea>
 
-            <button type="submit">Submit</button>
+            <button type="submit" disabled={loading}>
+        {loading ? <span className="loader"></span> : "Submit"}
+      </button>
           </form>
 
           {status && <p className="status">{status}</p>}
