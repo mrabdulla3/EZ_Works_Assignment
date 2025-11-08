@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "d3fc613d-7fa6-46c2-91b6-e85bdc8f104f",
+		"name": "EZ_Works",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42708301"
+	},
+	"item": [
+		{
+			"name": "contact-form-submission",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Abdulla\",\n  \"email\": \"abdulla@gmail.com\",\n  \"phone\": \"6395809794\",\n  \"message\": \"This is a test message\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://vernanbackend.ezlab.in/api/contact-us/",
+					"protocol": "https",
+					"host": [
+						"vernanbackend",
+						"ezlab",
+						"in"
+					],
+					"path": [
+						"api",
+						"contact-us",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
