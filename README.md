@@ -101,9 +101,3 @@ Screenshots
 
 <img width="1917" height="1020" alt="Screenshot from 2025-11-09 02-04-11" src="https://github.com/user-attachments/assets/e31a1bb0-f27b-4eea-ac4b-6c3d19de0f79" />
 <img width="1917" height="1020" alt="Screenshot from 2025-11-09 02-03-52" src="https://github.com/user-attachments/assets/3f784223-c0ff-41a9-ac2e-e2a5fe9ee141" />
-
-
-👤 Author
-
-Mohd Abdulla — (your name / GitHub: mrabdulla3)
-Contact: use the Contact form in the app 🙂
